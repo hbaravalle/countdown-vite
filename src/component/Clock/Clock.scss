@@ -1,0 +1,30 @@
+.clock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-2x;
+  font-weight: 600;
+
+  &.small {
+    font-size: 70px;
+    line-height: 70px;
+    color: $color-light-gray;
+  }
+
+  &.big {
+    font-size: 140px;
+    line-height: 140px;
+    color: $color-gray;
+
+    &.paused {
+      color: $color-lightish-gray;
+
+      &::before {
+        content: "Timer paused!";
+        color: orange;
+        font-size: 50px;
+        position: absolute;
+        animation: blink 2.5s infinite;
+      }
+    }
+  }
+}
